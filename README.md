@@ -1,5 +1,3 @@
-read.me
-
 # Projeto: Landing Page Moderna
 
 ## Objetivo
