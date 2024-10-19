@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page</title>
+    <!-- Tailwind CSS -->
+    <link href="https://cdn.tailwindcss.com" rel="stylesheet">
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/bd6f664c8c.js" crossorigin="anonymous"></script>
+    <!-- AOS.js -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Swiper.js -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="cabecalho">
+        <img class="logo" src="img/logo.jpg" alt="Logo da Empresa">
+        <button class="hamburguer" onclick="clickMenu()">
+        <i class="fas fa-bars"></i>
+        </button>
+        <nav class="menu" id="menu">
+            <ul>
+                <li><a class="menu-item" href="#sobre">Sobre</a></li>
+                <li><a class="menu-item" href="#servicos">Serviços</a></li>
+                <li><a class="menu-item" href="#testemunhos">Testemunhos</a></li>
+                <li><a class="menu-item" href="#contact">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Banner Principal -->
+    <main>
+        <section class="carousel-section">
+            <swiper-container class="mySwiper" pagination="true" pagination-clickable="true" navigation="true"
+                space-between="30" centered-slides="true" autoplay-delay="2500" autoplay-disable-on-interaction="false"
+                speed="1000" loop="true">
+                <swiper-slide><img src="img/Louvre_museu.jpg" alt="Museu do Louvre"></swiper-slide>
+                <swiper-slide><img src="img/Arco_do_Triunfo.jpg" alt="Arco do Triunfo"></swiper-slide>
+                <swiper-slide><img src="img/taj-mahal.jpg" alt="Taj Mahal"></swiper-slide>
+                <swiper-slide><img src="img/machu-picchu.jpg" alt="Machu Picchu"></swiper-slide>
+                <swiper-slide><img src="img/Niagara_Falls.jpg" alt="Cataratas do Niagara"></swiper-slide>
+                <swiper-slide><img src="img/Egito.jpg" alt="Pirâmides do Egito"></swiper-slide>
+                <swiper-slide><img src="img/Tower Bridge.jpg" alt="Tower Bridge"></swiper-slide>
+                <swiper-slide><img src="img/Cristo-Redentor.jpg" alt="Cristo Redentor no Rio de Janeiro"></swiper-slide>
+                <swiper-slide><img src="img/Las_Vegas.jpg" alt="Las Vegas"></swiper-slide>
+
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+
+            </swiper-container>
+        </section>
+
+        <!-- Seção Sobre -->
+        <section class="about" id="sobre">
+            <div class="about-content">
+                <h2 class="about-title">Quem Somos</h2>
+                <p class="description">Na <strong>AventurAr</strong>, transformamos suas viagens em experiências
+                    inesquecíveis. Com pacotes personalizados e suporte de qualidade, estamos prontos para levar você aos
+                    destinos mais incríveis do mundo.</p>
+                <button class="cta-button">Reserve sua Viagem</button>
+            </div>
+            <img src="img/about-image.jpg" alt="Pessoa caminhando com malas em direção à sua próxima viagem">
+        </section>
+
+        <!-- Seção Serviços -->
+        <section class="services" id="servicos">
+            <h2 class="services-title">Nossos Serviços</h2>
+            <div class="services-container">
+                <div class="service-card">
+                    <img src="img/Service_section airplane.jpg" alt="Serviço de Reservas de Voos">
+                    <h3>Reservas de Voos</h3>
+                    <p>Reservas de voos domésticos e internacionais com opções flexíveis e preços competitivos</p>
+                </div>
+                <div class="service-card">
+                    <img src="img/Service_section_CruiseShip.jpg" alt="Serviço de Reservas de Cruzeiros">
+                    <h3>Cruzeiros</h3>
+                    <p>Reserve cruzeiros para destinos tropicais, com rotas e pacotes personalizáveis</p>
+                </div>
+                <div class="service-card">
+                    <img src="img/Service_section_Passport.jpg" alt="Serviço de Pacotes de Viagem">
+                    <h3>Pacotes de Viagem</h3>
+                    <p>Pacotes de viagem para você desfrutar dos destinos mais desejados</p>
+                </div>
+                <div class="service-card">
+                    <img src="img/Service_section_Hotel.jpg" alt="Serviço de Reserva de Hotéis">
+                    <h3>Reserva de Hotéis</h3>
+                    <p>Reserva de hotéis com várias opções, de resorts de luxo a hospedagens econômicas</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção Testemunhos -->
+        <section class="testimonials" id="testemunhos">
+            <h2 class="testimonials-title">O que nossos Clientes Dizem?</h2>
+            <div id="testemunhos-container">
+                <!-- Os cards de depoimentos serão inseridos aqui via JavaScript -->
+            </div>
+        </section>
+
+        <section class="contato" id="contact">
+            <h2 class="contact-title">Entre em Contato</h2>
+            <form id="contactForm">
+                <label for="name">Nome:</label>
+                <input type="text" id="name" name="name" required autocomplete="name">
+        
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" required autocomplete="email">
+        
+                <label for="tel">Telefone:</label>
+                <input type="tel" id="tel" name="phone" required autocomplete="tel">
+        
+                <label for="departure-date">Data de Partida:</label>
+                <input type="date" id="departure-date" name="departure-date" required>
+        
+                <label for="return-date">Data de Retorno:</label>
+                <input type="date" id="return-date" name="return-date" required>
+        
+                <label for="origin">Local de Origem:</label>
+                <input type="text" id="origin" name="origin" required>
+        
+                <label for="destination">Local de Destino:</label>
+                <input type="text" id="destination" name="destination" required>
+        
+                <label for="adults">Quantidade de Adultos:</label>
+                <input type="number" id="adults" name="adults" min="1" required>
+        
+                <label for="children">Quantidade de Crianças:</label>
+                <input type="number" id="children" name="children" min="0" required>
+        
+                <label for="message">Mensagem:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+        
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+        
+        
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <ul class="social-links">
+                <li><a href="https://www.facebook.com" target="_blank" aria-label="Facebook"><i
+                            class="fa-brands fa-facebook"></i></a></li>
+                <li><a href="https://www.instagram.com" target="_blank" aria-label="Instagram"><i
+                            class="fa-brands fa-instagram"></i></a></li>
+                <li><a href="https://www.x.com" target="_blank" aria-label="X/Twitter"><i
+                            class="fa-brands fa-x-twitter"></i></a></li>
+            </ul>
+            <p>&copy; 2024 AventurAr - Todos os direitos reservados</p>
+            <div class="footer-links">
+                <a href="#">Termos de Uso</a> | <a href="#">Política de Privacidade</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+
+    <!-- Swiper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- EmailJS -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <!-- AOS.js -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
